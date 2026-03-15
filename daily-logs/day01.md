@@ -1,24 +1,16 @@
-# Learning Log - 2026-03-15
+# Learning Log - 2026-03-14
 
 ## Today's Goal
-Review HTML while building a personal introduction website.
+Connected git
 
 ## What I Learned
-- Basic HTML structure
-- Semantic HTML tags (header, nav, main, section, footer)
-- How to create navigation links inside a page
+- How to use git
 
 ## What I Built
-- Started building my personal website
-- Added sections for:
-  - About
-  - Skills
-  - Works
-  - Contact
+- 
 
 ## Reflection
-Today I reviewed HTML fundamentals while working on a real project.  
-It helped me understand the purpose of semantic tags better.
+-　It took much longer than I expected and was difficult to set up the GitHub integration by myself.
 
 ## Next Step
-Add styling using CSS or Tailwind CSS.
+HTML.
