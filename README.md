@@ -1,3 +1,3 @@
-# Laravel Practice
+# Practice
 
-Laravelの学習記録
+learning programming
