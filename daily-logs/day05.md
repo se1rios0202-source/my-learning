@@ -12,6 +12,8 @@ Make the layout responsive.
 - Adjusted image size for mobile
 
 ## Reflection
+- Adding hover effects made my portfolio look much more stylish.
+- Hover effects make a big difference.
 
 ## Next Step
 Improve UI design and spacing
