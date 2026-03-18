@@ -13,7 +13,8 @@ Create a profile card layout using HTML and CSS.
 - Used Flexbox to align items horizontally
 
 ## Reflection
-
+- I review what I’ve learned little by little.
+- I make sure not to leave anything I don’t understand.
 
 ## Next Step
 Make the layout responsive

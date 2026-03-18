@@ -56,3 +56,9 @@ nav a {
     max-width: 500px;
 
 }
+@media(max-width:600px){
+    .profile{
+        flex-direction: column;
+        text-align: center;
+    }
+}
