@@ -11,7 +11,7 @@ header {
     padding: 20px;
 }
 section {
-    padding: 60px 40px;
+    padding: 80px 40px;
     max-width: 800px;
     margin: auto;
 }
@@ -36,15 +36,40 @@ nav a {
     text-decoration: none;
     color: #333;
 }
+nav a:hover{
+    color: #2563EB;
+}
+
+.card{
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+.card:hover{
+    transform : translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2563EB;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
 
 .profile{
     display: flex;
     align-items: center;
     gap: 20px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .profile img{
     width: 120px;
@@ -56,6 +81,19 @@ nav a {
     max-width: 500px;
 
 }
+.profile-text p::first-letter{
+    color: #2563EB;
+    font-size: 42px;
+    font-weight: bold;
+    float:left;
+    margin-right: 9px;
+}
+.skills ul{
+    margin: 0;
+    padding-left: 20px;
+}
+
+
 @media(max-width:600px){
     .profile{
         flex-direction: column;
