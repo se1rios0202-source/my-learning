@@ -90,18 +90,17 @@ nav a:hover{
     float:left;
     margin-right: 9px;
 }
+
 .skills ul{
     margin: 0;
     padding-left: 20px;
 }
-
 .skills-grid{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
-
 .skill-card{
     background: #2563EB;
     color: white;
@@ -111,9 +110,19 @@ nav a:hover{
     min-width: 100px;
     text-align: center;
 }
-
 .skill-card:hover{
     transform: scale(1.1);
+}
+
+.contact-card {
+    text-align: center;
+}
+.contact-card .btn {
+    margin-top: 10px;
+}
+.contact-card .btn {
+    margin-top: 10px;
+    display: inline-block;
 }
 
 @media(max-width:600px){
