@@ -114,6 +114,14 @@ nav a:hover{
     transform: scale(1.1);
 }
 
+.project-card h3 {
+    margin-top: 0;
+    color: #2563EB;
+}
+.project-card p {
+    margin-bottom: 0;
+}
+
 .contact-card {
     text-align: center;
 }
