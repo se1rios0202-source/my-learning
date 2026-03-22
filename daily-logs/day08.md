@@ -1,4 +1,4 @@
-# Dev RPG Log - Day 8
+# Learning Log - 2026-03-21
 
 ## today's goal
 Add a Projects section to my portfolio website.
