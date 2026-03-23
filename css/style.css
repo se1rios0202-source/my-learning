@@ -42,6 +42,16 @@ nav a:hover{
     color: #2563EB;
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #F9FAFB;
+    color: #666;
+}
+footer p {
+    margin: 0;
+}
+
 .card{
     background: #fff;
     padding: 20px;
