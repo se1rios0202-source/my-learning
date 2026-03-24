@@ -144,6 +144,17 @@ footer p {
     display: inline-block;
 }
 
+.project-card h3 {
+    margin-top: 0;
+    color: #2563EB;
+}
+.project-card p {
+    margin-bottom: 20px;
+}
+.project-card .btn {
+    display: inline-block;
+}
+
 @media(max-width:600px){
     .profile{
         flex-direction: column;
