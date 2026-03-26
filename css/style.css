@@ -52,6 +52,15 @@ footer p {
     margin: 0;
 }
 
+input {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 12px;
+}
+
 .card{
     background: #fff;
     padding: 20px;
@@ -154,6 +163,7 @@ footer p {
 .project-card .btn {
     display: inline-block;
 }
+
 
 @media(max-width:600px){
     .profile{
