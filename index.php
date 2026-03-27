@@ -1,15 +1,29 @@
+<?php
+$name ='';
+
+if (isset($_GET['name'])){
+    $name = htmlspecialchars($_GET['name'], ENT_QUOTES,'UTF-8');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduce myself</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <h1>My Portfolio</h1>
     </header>
+
+    <?php if ($name !== ''): ?>
+        <p class="welcome-message">Welcome, <strong><?php echo $name; ?></strong>! </p>
+        <p class="welcome-sub">Please take a look at my portfolio</p>
+    <?php endif; ?>
+
     <nav>
         <ul>
             <li><a href="#introduce">Introduce myself</a></li>
