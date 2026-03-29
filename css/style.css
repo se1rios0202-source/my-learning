@@ -205,6 +205,24 @@ button {
     display: inline-block;
 }
 
+.result-message {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.error-message {
+    color: red;
+    text-align: center;
+}
+.success-message {
+    font-size: 20px;
+    color: #2563EB;
+}
+.success-sub {
+    color: #555;
+}
+
 
 @media(max-width:600px){
     .profile{

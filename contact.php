@@ -24,20 +24,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <textarea name="message" placeholder="Your message"></textarea>
                 <button type="submit">Send</button>
             </form>
-        </div>
+            <div class="result-message">
+                <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($name === '' || $message === '')): ?>
+                    <p class="error-message">
+                        Please fill in <strong>all fields</strong>.
+                    </p>
 
-        <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
-            <?php if ($name === '' || $message === ''): ?>
-                <p style="color:red;">Please fill in all fields.</p>
-            <?php else: ?>
-                <?php 
-                $safe_name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
-                $safe_message = htmlspecialchars($message,ENT_QUOTES,'UTF-8');
-                ?>
-                <p>Welcome, <?php echo $safe_name; ?>!</p>
-                <p>Your message: <?php echo $safe_message; ?></p>
-                <a href="index.php?name=<?php echo urlencode($safe_name); ?>">Go to Portfolio</a>
-            <?php endif; ?>
-        <?php endif; ?>   
+                <?php elseif ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
+                    <?php 
+                    $safe_name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+                    $safe_message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
+                    ?>
+                    <p class="success-message">
+                        Welcome, <strong><?php echo $safe_name; ?></strong>!
+                    </p>
+                    <p class="success-sub"><?php echo $safe_message; ?></p>
+                    <a href="index.php?name=<?php echo urlencode($safe_name); ?>">
+                        Go to Portfolio
+                    </a>
+                <?php endif; ?>
+            </div>
+        </div>
     </body>
 </html>
