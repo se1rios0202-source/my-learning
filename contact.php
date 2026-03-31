@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         Welcome, <strong><?php echo $safe_name; ?></strong>!
                     </p>
                     <p class="success-sub"><?php echo $safe_message; ?></p>
-                    <a href="index.php?name=<?php echo urlencode($safe_name); ?>">
+                    <a class="btn" href="index.php?name=<?php echo urlencode($safe_name); ?>">
                         Go to Portfolio
                     </a>
                 <?php endif; ?>
