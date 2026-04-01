@@ -95,10 +95,19 @@ button {
     text-decoration: none;
     transition: 0.3s;
 }
+.send-btn{
+    background: #6b7280;
+}
 
 .btn:hover {
     background: #1d4ed8;
     transform: translateY(-2px);
+}
+.portfolio-btn {
+    background: #2563EB;
+}
+.portfolio-btn:hover{
+    background: #1d4ed8;
 }
 
 .profile{

@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <textarea name="message" placeholder="Your message"><?php echo htmlspecialchars($message, ENT_QUOTES, 'UTF-8'); ?></textarea>
 
-            <button type="submit">Send</button>
+            <button class ="btn send-btn" type="submit">Send</button>
         </form>
             <div class="result-message">
                 <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($name === '' || $message === '')): ?>
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         Welcome, <strong><?php echo $safe_name; ?></strong>!
                     </p>
                     <p class="success-sub"><?php echo $safe_message; ?></p>
-                    <a class="btn" href="index.php?name=<?php echo urlencode($safe_name); ?>">
+                    <a class="btn portfolio-btn" href="index.php?name=<?php echo urlencode($safe_name); ?>">
                         Go to Portfolio
                     </a>
                 <?php endif; ?>
