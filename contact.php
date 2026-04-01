@@ -1,10 +1,17 @@
 <?php
 $name = '';
+$email = '';
 $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = trim($_POST['name'] ?? '');
+    $email = trim($_POST['email'] ?? '');
     $message = trim($_POST['message'] ?? '');
+
+    if ($name === '' || $email === '' || $message === '') {$error = 'Please fill in all fields.';
+    } elseif(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+        $error = 'Invalid email format.';
+    }
 }
 ?>
 
@@ -22,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form method="post">
             <input type="text" name="name" placeholder="Your name"
                 value="<?php echo htmlspecialchars($name, ENT_QUOTES, 'UTF-8'); ?>">
-
+            <input type="email" name="email" placeholder="Your email">
             <textarea name="message" placeholder="Your message"><?php echo htmlspecialchars($message, ENT_QUOTES, 'UTF-8'); ?></textarea>
 
             <button class ="btn send-btn" type="submit">Send</button>
@@ -41,7 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <p class="success-message">
                         Welcome, <strong><?php echo $safe_name; ?></strong>!
                     </p>
-                    <p class="success-sub"><?php echo $safe_message; ?></p>
+                    <p class="success-sub"><?php echo $safe_message; ?>
+                    </p>
                     <a class="btn portfolio-btn" href="index.php?name=<?php echo urlencode($safe_name); ?>">
                         Go to Portfolio
                     </a>
