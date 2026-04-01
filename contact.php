@@ -18,12 +18,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     </head>
     <body>
-        <div class="card contact-form">    
-            <form method="post">
-                <input type="text" name="name" placeholder="Your name">
-                <textarea name="message" placeholder="Your message"></textarea>
-                <button type="submit">Send</button>
-            </form>
+        <div class="card contact-form">
+        <form method="post">
+            <input type="text" name="name" placeholder="Your name"
+                value="<?php echo htmlspecialchars($name, ENT_QUOTES, 'UTF-8'); ?>">
+
+            <textarea name="message" placeholder="Your message"><?php echo htmlspecialchars($message, ENT_QUOTES, 'UTF-8'); ?></textarea>
+
+            <button type="submit">Send</button>
+        </form>
             <div class="result-message">
                 <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($name === '' || $message === '')): ?>
                     <p class="error-message">
