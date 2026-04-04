@@ -2,6 +2,7 @@
 $name = '';
 $email = '';
 $message = '';
+$error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = trim($_POST['name'] ?? '');
@@ -35,22 +36,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button class ="btn send-btn" type="submit">Send</button>
         </form>
             <div class="result-message">
-                <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($name === '' || $message === '')): ?>
+                <?php if ($error !== ''): ?>
                     <p class="error-message">
-                        Please fill in <strong>all fields</strong>.
+                        <?php echo $error; ?>
                     </p>
 
                 <?php elseif ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
-                    <?php 
-                    $safe_name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
-                    $safe_message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
-                    ?>
                     <p class="success-message">
-                        Welcome, <strong><?php echo $safe_name; ?></strong>!
+                        Welcome, <strong><?php echo htmlspecialchars($name); ?></strong>!
                     </p>
-                    <p class="success-sub"><?php echo $safe_message; ?>
+                    <p class="success-sub"><?php echo htmlspecialchars($message); ?>
                     </p>
-                    <a class="btn portfolio-btn" href="index.php?name=<?php echo urlencode($safe_name); ?>">
+                    <a class="btn" href="index.php?name=<?php echo urldecode($name); ?>">
                         Go to Portfolio
                     </a>
                 <?php endif; ?>
